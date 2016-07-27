@@ -17,6 +17,8 @@ HotdogsController.$inject = ['hotdogService','Hotdog','$interval'];
 function HotdogsController(hotdogService, Hotdog, $interval) {
   this.data = hotdogService;
   this.data.buy(50);
+
+  //Event handlers for hotdog click
   this.putOnGrill = function(i){
     console.log(i)
     var hd = this.data.pan.splice(i,1);
@@ -26,6 +28,8 @@ function HotdogsController(hotdogService, Hotdog, $interval) {
     var hd = this.data.grill.splice(i,1);
     this.data.plate.push(hd[0]);
   }
+
+  //Interval function to manage cooking times.
   var self = this;
   $interval(function(){
       for (var i = 0; i < self.data.grill.length; i++) {
@@ -46,6 +50,8 @@ function hotdogService(Hotdog){
   service.currentId=0;
   service.hotdogs=[];
   service.time = 0;
+
+  //This might be better as either an object with three arrays or using ng-filter in hotdogs.html
   service.pan = [];
   service.grill = [];
   service.plate = [];
@@ -85,7 +91,7 @@ function HotdogFactory() {
     Hotdog.onGrill = function (t) {
         Hotdog.location = 'On the Grill';
         Hotdog.startTime = t;
-        return "There's another one!";
+        console.log("There's another one!");
     };
     Hotdog.updateImg = function(){
       if(Hotdog.imgs.length === 1){
@@ -109,7 +115,7 @@ function HotdogFactory() {
         } else if(cookTime > 10){
           Hotdog.cookedAmount = 'Burnt';
         }
-        return ('Cooked Amount Updated to: ' + Hotdog.cookedAmount);
+        console.log('Cooked Amount Updated to: ' + Hotdog.cookedAmount);
       }
     return Hotdog;
     };
