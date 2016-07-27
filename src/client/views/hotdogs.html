@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-4"></div>
+  <button ng-click="ctrl.data.buy(1)" class="btn btn-primary btn-lg">Buy a Hotdog</button>
+  <h1 class="col-md-4">Grillin' Dogs</h1>
+</div>
+
+<div class="container surface">
+  <div class="row m-t-3 cooking">
+    <div class="col-md-3 pan">
+      <div ng-repeat="hotdog in ctrl.data.pan track by $index" ng-click="ctrl.putOnGrill($index)" class="col-sm-1 hotdog-container">
+        <img ng-src="{{hotdog.imgs[1].img}}"  class="image-fluid"/>
+        <img ng-src="{{hotdog.imgs[0].img}}" ng-style="{'opacity': hotdog.imgs[0].opacity }" class="image-fluid"/>
+      </div>
+    </div>
+    <div class="col-md-4 grill">
+      <div ng-repeat="hotdog in ctrl.data.grill track by $index" ng-click="ctrl.takeOffGrill($index)" class="col-sm-1 hotdog-container">
+        <img ng-src="{{hotdog.imgs[1].img}}"  class="image-fluid"/>
+        <img ng-src="{{hotdog.imgs[0].img}}" ng-style="{'opacity': hotdog.imgs[0].opacity }" class="image-fluid"/>
+      </div>
+    </div>
+    <div class="col-md-3 plate">
+      <div ng-repeat="hotdog in ctrl.data.plate track by $index" class="col-sm-1 hotdog-container">
+        <img ng-src="{{hotdog.imgs[1].img}}"  class="image-fluid"/>
+        <img ng-src="{{hotdog.imgs[0].img}}" ng-style="{'opacity': hotdog.imgs[0].opacity }" class="image-fluid"/>
+      </div>
+    </div>
+  </div>
+
+</div>

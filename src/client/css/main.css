@@ -1,0 +1,53 @@
+.surface{
+  /*min-width:1200px;*/
+  height:650px;
+  padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../img/bkg.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 10px;
+}
+.surface .cooking{
+  max-height: 440px;
+  overflow: hidden;
+  padding-top: 35px;
+}
+.hotdog-container{
+  position: relative;
+  height: 200px;
+  margin-bottom: -25px;
+}
+.plate{
+  margin-left: 20px;
+  padding-top: 35px;
+}
+.plate div{
+  width: 20px;
+  /*margin-left: -20px;*/
+}
+.grill{
+  padding-top: 35px;
+  margin-left: 50px;
+}
+.grill div{
+  width: 40px;
+  margin-left: 10px;
+}
+.pan{
+  margin-left: 40px;
+  padding-right: 30px;
+  padding-top: 35px;
+}
+.pan div{
+  width: 20px;
+  margin-left: -20px;
+}
+img{
+  position:absolute;
+  top: 0;
+  left: 0;
+}
+button{
+  margin-top: 20px;
+}
