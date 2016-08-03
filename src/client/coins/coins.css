@@ -1,0 +1,22 @@
+.bank{
+  height: 400px;
+  width: 400px;
+  background-image: url('https://pixabay.com/static/uploads/photo/2014/10/03/22/43/piggybank-472297_960_720.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bank h2{
+  margin-top: 50%;
+}
+.coin{
+  /*min-width:1200px;*/
+  height:100px;
+  width:100px;
+  background-image: url('http://bit.ly/2awsAWB');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.coin h2{
+  margin-top: 40%;
+}

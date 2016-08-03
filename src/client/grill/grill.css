@@ -16,18 +16,15 @@
 .hotdog-container{
   position: relative;
   height: 200px;
-  margin-bottom: -25px;
 }
 .plate{
-  margin-left: 20px;
-  padding-top: 35px;
+  margin-left: 30px;
 }
 .plate div{
   width: 20px;
   /*margin-left: -20px;*/
 }
 .grill{
-  padding-top: 35px;
   margin-left: 50px;
 }
 .grill div{

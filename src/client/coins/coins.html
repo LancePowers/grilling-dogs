@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <button ng-click="ctrl.add()" class="btn btn-primary btn-lg">Get a Coin</button>
+    <h1 class="col-md-4">Making Bank</h1>
+  </div>
+  <div class="row m-t-3">
+    <div class="col-md-6">
+      <div ng-repeat="coin in ctrl.coins.undeposited track by $index" ng-dblclick="ctrl.deposit($index)" class="col-sm-1 coin">
+        <h2 class="text-center" ng-click="ctrl.increase($index)">${{coin.amount}}</h2>
+      </div>
+    </div>
+    <div class="col-md-6 bank">
+      <h2 class="text-center">${{ctrl.total()}}</h2>
+    </div>
+  </div>
+
+</div>
